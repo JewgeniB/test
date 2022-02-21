@@ -9,40 +9,40 @@
 </head>
 <body>
     <nav class="navbar">
-        <button onclick="myFunction()">Toggle dark mode</button>
+        <button id="BDM" onclick="toggleFunction()">Dark Mode</button>
     </nav>
 
     <h1>Herzlich Willkommen</h1>
     <p>Auf dieser Seite können Sie sich Ihr Entgelt anzeigen lassen. <br aria-hidden="true">
     Wählen Sie die Entgeltgruppe und die Stufe aus und klicken Sie auf den Berechnen Button.</p>
     <div class="container">
-        <div class="item">
+        <div class="item" id="EGGruppe">
             <label>Entgeltgruppe:
                 <select name="EG">
-                  <option>E15Ü</option>
-                  <option>E15</option>
-                  <option>E14</option>
-                  <option>E13</option>
-                  <option>E12</option>
-                  <option>E11</option>
-                  <option>E10</option>
-                  <option>E9C</option>
-                  <option>E9B</option>
-                  <option>E9A</option>
-                  <option>E8</option>
-                  <option>E7</option>
-                  <option>E6</option>
-                  <option>E5</option>
-                  <option>E4</option>
-                  <option>E3</option>
-                  <option>E2Ü</option>
-                  <option>E2</option>
-                  <option>E1</option>
+                  <option value="E15UE">E15Ü</option>
+                  <option value="E15">E15</option>
+                  <option value="E14">E14</option>
+                  <option value="E13">E13</option>
+                  <option value="E12">E12</option>
+                  <option value="E11">E11</option>
+                  <option value="E10">E10</option>
+                  <option value="E9C">E9C</option>
+                  <option value="E9B">E9B</option>
+                  <option value="E9A">E9A</option>
+                  <option value="E8">E8</option>
+                  <option value="E7">E7</option>
+                  <option value="E6">E6</option>
+                  <option value="E5">E5</option>
+                  <option value="E4">E4</option>
+                  <option value="E3">E3</option>
+                  <option value="E2UE">E2Ü</option>
+                  <option value="E2">E2</option>
+                  <option value="E1">E1</option>
                 </select>
             </label>
         </div>
-        <div class="item">
-            <label>Entgeltgruppe:
+        <div class="item" id="Stufe">
+            <label>Stufe:
                 <select name="ST">
                   <option>1</option>
                   <option>2</option>
@@ -54,9 +54,14 @@
               </label>
         </div>
         <div class="button">
-            <button type="button">Click Me!</button>
+            <button type="button" onclick="showEG()">Click Me!</button>
         </div>
     </div>
+    <div>
+        <p id="resultEG"></p>
+    </div>
+
+
     <script src="./script.js"></script>
 </body>
 </html>
